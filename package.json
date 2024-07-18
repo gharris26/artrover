@@ -1,0 +1,82 @@
+{
+  "name": "art-rover",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Practise joins",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "run-p dev:client dev:server",
+    "dev:client": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "run-s build:client build:server",
+    "build:client": "vite build",
+    "build:server": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.js --bundle server/index.ts",
+    "test": "vitest",
+    "knex": "knex --knexfile ./server/db/knexfile.js",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-academy-challenges/knex-joins-stories.git"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@devacademy"
+    ]
+  },
+  "keywords": [],
+  "author": "Enspiral Dev Academy",
+  "license": "ISC",
+  "homepage": "https://github.com/dev-academy-challenges/knex-joins-stories#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "knex": "^2.5.1",
+    "npm-run-all": "^4.1.5",
+    "sqlite3": "^5.1.6",
+    "tsx": "^3.14.0"
+  },
+  "devDependencies": {
+    "@devacademy/eslint-config": "^1.10.1",
+    "@playwright/test": "^1.38.1",
+    "@tanstack/react-query": "^5.12.2",
+    "@tanstack/react-query-devtools": "^5.13.3",
+    "@testing-library/dom": "^8.17.1",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/express": "^4.17.14",
+    "@types/node": "^20.10.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/superagent": "^8.1.1",
+    "@types/supertest": "^6.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.34.1",
+    "jsdom": "^22.1.0",
+    "nock": "^13.4.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "playwright": "^1.38.1",
+    "prettier": "^3.2.5",
+    "react": "^18.0.2",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2",
+    "superagent": "^8.1.2",
+    "supertest": "^6.3.4",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "vitest": "^1.2.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}

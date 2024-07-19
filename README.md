@@ -40,7 +40,9 @@ artworks are being displayed in which galleries.
 - [ ] create a new migration which adds new column called `gallery_id`
   <details>
     <summary>Adding a new column</summary>
-    To update an existing table in a migration we're going to use: `knex.schema.alterTable('artworks', (table) => { ... })`
+    To update an existing table in a migration we're going to use: 
+    
+    `knex.schema.alterTable('artworks', (table) => { ... })`
 
     This column should be explicitly related to the gallery table, using `table.integer('gallery_id').references('galleries.id')`
 

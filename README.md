@@ -10,6 +10,10 @@ We want you to add some new features that let the users track which
 artworks are being displayed in which galleries.
 ---
 
+## MVP (Minimum Viable Product)
+- Complete steps 1 - 3
+
+
 ## Setup
 
 ### 0. Installation and migrations

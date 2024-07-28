@@ -4,6 +4,12 @@ export interface ArtworkData {
   description: string
 }
 
+export interface ArtworkDetails extends Artwork {
+  gallery_id: number
+  gallery_name: string
+  gallery_description: string
+}
+
 export interface Artwork extends ArtworkData {
   id: number
 }

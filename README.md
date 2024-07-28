@@ -18,8 +18,8 @@ artworks are being displayed in which galleries.
 
 ### 0. Installation and migrations
 
-- [ ] Clone this repo and `cd` into the new directory
-- [ ] Install packages, run migrations and seeds, and start the dev server with `npm run dev`
+- [x] Clone this repo and `cd` into the new directory
+- [x] Install packages, run migrations and seeds, and start the dev server with `npm run dev`
   <details style="padding-left: 2em">
     <summary>Tip</summary>
 
@@ -34,10 +34,10 @@ artworks are being displayed in which galleries.
 
     This will create and populate the database with the existing migrations and seeds, and start the server with `nodemon`.
   </details>
-- [ ] Visit the [list of artworks](http://localhost:5173/artworks) and the [list of galleries](http://localhost:5173/galleries) and click through to see the individual pages for an artwork and a gallery 
+- [x] Visit the [list of artworks](http://localhost:5173/artworks) and the [list of galleries](http://localhost:5173/galleries) and click through to see the individual pages for an artwork and a gallery 
 ----
 ### 1. Add a relationship to the schema
-- [ ] create a new migration which adds new column called `gallery_id`
+- [x] create a new migration which adds new column called `gallery_id`
   <details>
     <summary>Adding a new column</summary>
     To update an existing table in a migration we're going to use: 
@@ -52,7 +52,7 @@ artworks are being displayed in which galleries.
 
     Read the [knex docs](https://knexjs.org/guide/schema-builder.html#foreign) for more details.
   </details>
-- [ ] update your seeds to have the relationship
+- [x] update your seeds to have the relationship
   <details>
     <summary>Updating seeds</summary>
 
@@ -62,7 +62,7 @@ artworks are being displayed in which galleries.
   </details>
 
 ### 2. Add details to the `GET /api/v1/artworks/:id` route
-- [ ] Update our type definitions
+- [x] Update our type definitions
  
   We're going to define a new interface in [artwork](./models/artwork.ts) called `ArtworkDetails`
 

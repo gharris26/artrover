@@ -74,7 +74,7 @@ artworks are being displayed in which galleries.
   }
   ```
   
-- [ ] Rewrite the query for `artworks.byId`
+- [x] Rewrite the query for `artworks.byId`
   Open the [db/artworks module](./server/db/artworks.ts) and rewrite the `byId` query to return an `ArtworkDetails` instead of an `Artwork`.
 
   You'll want to `join` to the `galleries` table
@@ -114,7 +114,7 @@ artworks are being displayed in which galleries.
 
     Either in the browser, Thunder Client or insomnia `GET http://localhost:5173/api/v1/artworks/3` and check that you're getting the output you expect. On some computers, you might need to use ` http://localhost:3000/api/v1/artworks/3` for this to work in Thunder Client
   </details>
-- [ ] Update the server tests for `byId`
+- [x] Update the server tests for `byId`
 
   We have tests for the database function and the route that we've changed.
 
@@ -139,17 +139,17 @@ artworks are being displayed in which galleries.
   </details>
 
 ### 3. Update the artwork details page
-- [ ] Update the return type of our data hook
+- [x] Update the return type of our data hook
   
   In [hooks/api](./client/hooks/api.ts) we define the queries we use to load data from the API into our components.
 
   The only change we really need to make here is to change the cast in `useArtworkDetails` so that it returns an `ArtworkDetails` instead of an `Artwork`
 
-- [ ] Add a link to the Artwork details page
+- [x] Add a link to the Artwork details page
   
   Update [`<ArtworkDetails />`](./client/components/ArtworkDetails.tsx) to include a link to the gallery details using `<Link />` component from `react-router-dom`. You can use the `gallery_id` prop for this.
 
-- [ ] Update our tests for the artwork details page
+- [x] Update our tests for the artwork details page
 
   Our existing tests should still be passing. Run `npm test` to confirm.
 

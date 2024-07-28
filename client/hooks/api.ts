@@ -18,7 +18,7 @@ export function useArtworkDetails(id: number) {
     queryKey: ['artworks', id],
     queryFn: async () => {
       const data = await request.get(`/api/v1/artworks/${id}`)
-      return data.body as Artwork
+      return data.body[0] as ArtworkDetails
     },
   })
 }

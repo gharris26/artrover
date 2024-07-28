@@ -38,7 +38,7 @@ export function useGalleryDetails(id: number) {
     queryKey: ['galleries', id],
     queryFn: async () => {
       const data = await request.get(`/api/v1/galleries/${id}`)
-      return data.body as Gallery
+      return data.body as GalleryDetails
     },
   })
 }

@@ -201,12 +201,12 @@ artworks are being displayed in which galleries.
   up-to-date by and passing.
 
 ### 5. Update the gallery details page
-- [ ] Update the return type of `useGalleryDetails`
-- [ ] Add a list of artworks to the Gallery Details page
+- [x] Update the return type of `useGalleryDetails`
+- [x] Add a list of artworks to the Gallery Details page
   
   Each list item should link to the artwork detail page
 
-- [ ] Update our tests for the Gallery Details page
+- [x] Update our tests for the Gallery Details page
 
   Confirm that the relevant artworks are listed and that they link to the correct place
 

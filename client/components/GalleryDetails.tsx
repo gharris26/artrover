@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useGalleryDetails } from '../hooks/api.ts'
 import LoadingIndicator from './LoadingIndicator.tsx'
 import ErrorMessage from './ErrorMessage.tsx'
@@ -16,12 +16,22 @@ export default function GalleryDetails() {
     return <ErrorMessage error={detail.error} />
   }
 
-  const { name, description } = detail.data
-
   return (
     <>
-      <h2>Gallery: {name}</h2>
-      <p>{description}</p>
+      <h2 role="heading">Gallery: {detail.data[0].name}</h2>
+      <p>{detail.data[0].description}</p>
+      <h3>Artworks</h3>
+      <ul>
+        {detail.data.map((artwork) => (
+          <li key={artwork.id}>
+            <h4>
+              <Link role="link" to={`/artworks/${artwork.artwork_id}`}>{artwork.artwork_name}</Link>
+            </h4>
+            <em>{artwork.artwork_medium}</em>
+            <p>{artwork.artwork_description}</p>
+          </li>
+        ))}
+      </ul>
     </>
   )
 }

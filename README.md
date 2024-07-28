@@ -166,7 +166,7 @@ artworks are being displayed in which galleries.
   </details>
 
 ### 4. Add details to the `GET /api/v1/galleries/:id` route
-- [ ] Update our type definitions
+- [x] Update our type definitions
  
   We're going to define a new interface in [gallery](./models/gallery.ts) called `GalleryDetails`
 
@@ -177,7 +177,7 @@ artworks are being displayed in which galleries.
     artworks: Artwork[]
   }
   ```
-- [ ] Rewrite the query for `galleries.byId`
+- [x] Rewrite the query for `galleries.byId`
 
   Similar to the query we wrote for `artworks.byId` we're going to
   do another join but this time from `galleries` to `artworks`.
@@ -195,7 +195,7 @@ artworks are being displayed in which galleries.
 
     If there are no related artworks, the first row will have an `artwork_id` of `null`. So we can skip any rows like that when building up our array
   </details>
-- [ ] Updating the server tests
+- [x] Updating the server tests
 
   Run `npm test`, make sure the tests related to `galleries.byId` are
   up-to-date by and passing.

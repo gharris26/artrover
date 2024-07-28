@@ -32,11 +32,35 @@ describe('.byId(id)', () => {
   it('pulls out the right gallery', async () => {
     const data = await galleries.byId(3)
     expect(data).toMatchInlineSnapshot(`
-      {
-        "description": "Welcome to The Wacky Brushstroke Wonderland, a place where imagination runs wild and artistic boundaries are non-existent. Our gallery is a playground for the eccentric and the whimsical.",
-        "id": 3,
-        "name": "The Wacky Brushstroke Wonderland",
-      }
+      [
+        {
+          "artwork_description": "A sparkling galaxy made of chewed gum wrappers, where planets of bubblegum pop and sugary stars light up the universe.",
+          "artwork_id": 3,
+          "artwork_medium": "Chewing gum wrappers and glitter on canvas",
+          "artwork_name": "Bubblegum Galaxy",
+          "description": "Welcome to The Wacky Brushstroke Wonderland, a place where imagination runs wild and artistic boundaries are non-existent. Our gallery is a playground for the eccentric and the whimsical.",
+          "id": 3,
+          "name": "The Wacky Brushstroke Wonderland",
+        },
+        {
+          "artwork_description": "A groovy arrangement of psychedelic popsicles sprouting vibrant flowers, spreading summer vibes and sweet sensations.",
+          "artwork_id": 7,
+          "artwork_medium": "Popsicle sticks and acrylic paint",
+          "artwork_name": "Flower Power Popsicles",
+          "description": "Welcome to The Wacky Brushstroke Wonderland, a place where imagination runs wild and artistic boundaries are non-existent. Our gallery is a playground for the eccentric and the whimsical.",
+          "id": 3,
+          "name": "The Wacky Brushstroke Wonderland",
+        },
+        {
+          "artwork_description": "A whimsical dance of banana peels and twine on a giant banana leaf stage, showcasing the graceful beauty of fruit in motion.",
+          "artwork_id": 11,
+          "artwork_medium": "Banana peels and twine on a banana leaf",
+          "artwork_name": "Banana Bonanza Ballet",
+          "description": "Welcome to The Wacky Brushstroke Wonderland, a place where imagination runs wild and artistic boundaries are non-existent. Our gallery is a playground for the eccentric and the whimsical.",
+          "id": 3,
+          "name": "The Wacky Brushstroke Wonderland",
+        },
+      ]
     `)
   })
 })

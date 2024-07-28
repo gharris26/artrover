@@ -8,8 +8,16 @@ export async function all() {
 
 export async function byId(id: number) {
   const gallery = await connection('galleries')
-    .select('*')
-    .where({ id })
-    .first()
-  return gallery as Gallery
+    .join('artworks', 'artworks.gallery_id', 'galleries.id')
+    .select(
+      'galleries.*',
+      'galleries.id',
+      'galleries.name',
+      'galleries.description',
+      'artworks.id as artwork_id',
+      'artworks.name as artwork_name',
+      'artworks.description as artwork_description',
+      'artworks.medium as artwork_medium',)
+    .where('galleries.id', id)
+  return gallery as GalleryDetails
 }
